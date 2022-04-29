@@ -1,0 +1,39 @@
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin reset-btn {
+  padding: 0;
+
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+@mixin font ($size, $height: $size, $weight: normal, $style: normal) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+@mixin columns ($justify, $width) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $justify;
+
+  //для дочерних элементов
+  >* {
+    flex-basis: $width;
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: $mobile-max-width) {
+    @content;
+  }
+}
