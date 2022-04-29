@@ -1,0 +1,9 @@
+*.js text eol=lf
+*.jpg -text
+*.png -text
+*.gif -text
+*.mp4 -text
+*.ttf binary
+*.eot binary
+*.woff binary
+*.woff2 binary
